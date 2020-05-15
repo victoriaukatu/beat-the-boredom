@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Router } from 'react-router-dom';
 import './App.css';
+import { connect } from 'react-redux';
+import PairingGame from './PairingGame';
 
 class App extends Component {
   render() {
@@ -20,10 +22,16 @@ class App extends Component {
           <button class="button">MAZE GAME</button>
           <button class="button">GUESSING GAME</button>
           <span class="emoji" role="img" aria-label="raised hands emoji">🙌🏽</span>
+          <Router>
+            <Route 
+              exact path="/pairing-game"
+              component={PairingGame}
+            />
+          </Router>
         </div>
       </div>
     );
   }
 }
 
-export default App;
+export default connect() (App);

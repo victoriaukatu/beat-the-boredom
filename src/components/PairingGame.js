@@ -12,4 +12,4 @@ class PairingGame extends Component {
 
 }
 
-export default PairingGame;
+export default withRouter(connect(PairingGame));
