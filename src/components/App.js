@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import { Route, Router } from 'react-router-dom';
+import { 
+  Route, 
+  HashRouter as Router,
+  // Redirect,
+  Switch
+ } from 'react-router-dom';
 import './App.css';
 import { connect } from 'react-redux';
 import PairingGame from './PairingGame';
@@ -23,10 +28,12 @@ class App extends Component {
           <button class="button">GUESSING GAME</button>
           <span class="emoji" role="img" aria-label="raised hands emoji">🙌🏽</span>
           <Router>
+            <Switch>
             <Route 
               exact path="/pairing-game"
               component={PairingGame}
             />
+            </Switch>
           </Router>
         </div>
       </div>
