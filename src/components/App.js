@@ -26,8 +26,8 @@ class App extends Component {
           <div class="button-holder">
             <span class="emoji" id="emoji-face" role="img" aria-label="happy emoji">😆</span>
             <Link to="/pairing-game"><button class="button">PAIRING GAME</button></Link>
-            <button class="button">MAZE GAME</button>
-            <button class="button">GUESSING GAME</button>
+            <Link to="/maze"><button class="button">MAZE GAME</button></Link>
+            <Link to="/guessing-game"><button class="button">GUESSING GAME</button></Link>
             <span class="emoji" role="img" aria-label="raised hands emoji">🙌🏽</span>
             <Switch>
               <Route
